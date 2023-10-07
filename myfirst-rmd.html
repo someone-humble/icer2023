@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Validate discrepancy between  academic skills and self-assessment</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Sangyun Lee  Yongnam Kim" />
+    <script src="libs/header-attrs-2.24/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <script src="libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+    <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+    <script src="libs/datatables-binding-0.29/datatables.js"></script>
+    <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+    <link href="libs/dt-core-1.13.4/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="libs/dt-core-1.13.4/css/jquery.dataTables.extra.css" rel="stylesheet" />
+    <script src="libs/dt-core-1.13.4/js/jquery.dataTables.min.js"></script>
+    <link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+    <script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Validate discrepancy between<br/> academic skills and self-assessment
+]
+.subtitle[
+## Leveraging the Structural Causal Model
+]
+.author[
+### Sangyun Lee<br/> Yongnam Kim
+]
+.institute[
+### Department of Education, Seoul National University
+]
+.date[
+### 2023/10/11 (updated: 2023-10-07)
+]
+
+---
+
+
+
+class: inverse, center, middle
+
+# Introduction
+---
+### Validity of self-assessment
+* As an abstract concept, education attempts to measure a variety of latent variables, including academic ability, creativity, and career maturity.&lt;br/&gt;
+
+* In particular, in the classroom, the latent variable of most interest to teachers and students is academic ability.&lt;br/&gt;
+
+* There are many ways to measure academic ability.
+
+* In particular, there are several studies on self-assessment validity.
+
+
+&lt;img src="https://cdn-icons-png.flaticon.com/512/2974/2974155.png" width="150" height="150" /&gt;&lt;/left&gt;
+&lt;img src="https://cdn-icons-png.flaticon.com/512/4728/4728534.png" width="150" height="150" /&gt;
+&lt;img src="https://cdn-icons-png.flaticon.com/512/9238/9238718.png" width="150" height="150" /&gt;
+
+
+---
+### Validity conditions from a structural perspective
+* In order for the measurement of a latent variable to be causally valid, **Exclusion Restriction assumption** must be met.
+
+* In measurement, Exclusion Restriction assumption means that the exogenous variable affects the indicators by fully mediating the latent variable.
+
+* Assessment that do not fulfill the Exclusion Restriction assumption can lead to serious social problems such as fairness.
+&lt;br/&gt;&lt;br/&gt;
+
+&lt;img src="https://cdn-icons-png.flaticon.com/512/3053/3053723.png" width="110" height="110" /&gt;
+
+---
+
+class: inverse, center, middle
+
+# Theoretical background
+
+---
+### Structural Causal Model of Exclusion Restriction Assumption
+.pull-left[
+* Structural causal model for the Exclusion Restriction assumption in the measurement model is shown in Figure 1.
+
+* In Figure 1, the red path indicates a violation of the Exclusion Restriction Assumption.
+
+* Among the non-causal path, because of the path of the red line, `\(X_1\)` contains information from `\(T\)`.
+  * `\(\eta \rightarrow X_1\)`: Causal path
+  * `\(\eta \leftarrow T  \rightarrow X_1\)`: Non-causal path
+  ]
+
+.pull-right[
+&lt;br/&gt;&lt;br/&gt;
+&lt;img src="https://drive.google.com/uc?id=1ttUs6N4GjraUsuMDM8_sLH4cObFo3GfC" width="600" height="290" /&gt;
+&lt;center&gt; Figure 1&lt;/center&gt;
+]
+---
+
+### Structural description of the DIF &lt;br/&gt; (utilizing gender and self-assessment)
+* The Exclusion Restriction Assumption in measurement is structurally very similar to Differential Item Functioning (DIF).
+
+* Gender affects self-evaluation in two ways.
+
+  * The first path is the **rational path** (the path through which the population variable affects the correctness rate via ability).
+
+  * The second path is the **irrational path** (where the population variable directly affects the correctness rate).
+
+* Here, the second path is **violating the Exclusion Restriction Assumption**.
+
+* This means that groups of people with the same ability may have different rates of correct responses.
+---
+### Assumption of univariate latent variable
+* Causally related components are typically multivariate, not univariate, and it is necessary to validate this univariate assumption.
+
+* For example, it is not that the psychological construct of motivation affects specific behaviors (outcomes), but rather that each empirical item that measures motivation can affect specific behaviors (outcomes).
+
+* Univariate assumptions in latent factor models are empirically testable.
+---
+class: inverse, center, middle
+
+# Research Methods
+---
+### Drawing Causal relationship about ability
+
+* The purpose of this study is to test the causal validity of self-assessment,
+
+* For the purpose of validation, ability test was utilized as the gold standard.
+
+* The structural causal model between the variables of interest is shown in figure 2.
+
+&lt;center&gt;
+&lt;img src="https://drive.google.com/uc?id=1ml9NYjrt-6tMpwCQxoJIJRRLRYpEaFOj" width="300" height="300" /&gt;&lt;br/&gt;
+Figure 2
+&lt;/center&gt;
+---
+### Testing the Exclusion Restriction Assumption in a measurement
+#### Testing Assumption of univariate latent variable
+* The general latent factor model has the equation (1).
+`$$X_i = \lambda_i\eta_i + \epsilon_i$$`
+&lt;center&gt; equation (1) &lt;/center&gt;
+&lt;br/&gt;&lt;br/&gt;
+
+* If the exclusion constraint assumption is satisfied in Eq. (1), Theorem 1 is derived.
+`$$E(X_i \mid Z=z) - E(X_i \mid Z=z*) = \alpha_i\beta_i$$`
+&lt;center&gt; Theorem 1 &lt;/center&gt;
+&lt;br/&gt;&lt;br/&gt;
+* If Theorem 1 does not hold, the exclusion constraint assumption is **rejected**.
+---
+### Testing the Exclusion Restriction Assumption in a measurement
+#### Gain score Method
+* Gain score method requires that the common trend assumption ( `\(\beta_1\)` = `\(\beta_2\)` ) is satisfied.
+
+* The various measures can be expected to be similarly affected by ability.
+
+* **If `\(\tau\)` is statistically significant**, it means that exogenous variables other than academic ability **directly affect self-assessment**.
+&lt;center&gt;
+&lt;img src="https://drive.google.com/uc?id=13_4styqMKIw75Nct7tBImvY60EPHyK_8" width="400" height="280" /&gt;
+&lt;/center&gt;&lt;center&gt;
+Figure 3
+&lt;/center&gt;
+---
+class: inverse, center, middle
+
+# Research findings
+
+---
+### Degree of discrepancy
+* The degree of discrepancy was calculated as the difference between self-assessment and ability test.
+
+* It was divided into three categories:
+  * Underestimation is when the difference between self-assessment and ability test is **negative**,
+  * Agreement is when the difference is **zero**,
+  * Overestimation is when the difference is **positive**.
+
+<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-f9a146817bfbba16a190" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-f9a146817bfbba16a190">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["1","2","3","4","5","6","7","8"],["Korean","Korean","Korean","Korean","Math","Math","Math","Math"],[2018,2019,2020,2021,2018,2019,2020,2021],[6,5,6,9,5,6,10,13],[22,22,24,26,21,36,35,37],[72,73,70,65,74,58,56,50]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>subject<\/th>\n      <th>year<\/th>\n      <th>Under<\/th>\n      <th>Agree<\/th>\n      <th>Over<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":4,"columnDefs":[{"className":"dt-right","targets":[2,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[4,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+---
+### Degree of discrepancy
+* The overestimation group had the highest percentage, 50-73%,
+
+* The proportion of Agreement groups was 21-37%,
+
+* Underestimation was the least common at 5-13%.
+
+<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-9b5657c6b456caa8a1f1" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-9b5657c6b456caa8a1f1">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["1","2","3","4","5","6","7","8"],["Korean","Korean","Korean","Korean","Math","Math","Math","Math"],[2018,2019,2020,2021,2018,2019,2020,2021],[6,5,6,9,5,6,10,13],[22,22,24,26,21,36,35,37],[72,73,70,65,74,58,56,50]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>subject<\/th>\n      <th>year<\/th>\n      <th>Under<\/th>\n      <th>Agree<\/th>\n      <th>Over<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":4,"columnDefs":[{"className":"dt-right","targets":[2,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[4,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+---
+### Testing Assumption of univariate latent variable
+* Exogenous Variable was redefined as a variable with four response categories.
+
+* Specifically, the response categories were recoded as
+  * 1 (male, parental income below average)
+  * 2 (male, parental income above average)
+  * 3 (female, parental income below average)
+  * 4 (female, parental income above average)
+  
+* The null hypothesis is as follows. &lt;br/&gt;
+`$$H_0: \{E(P \mid Z=2) - E(P \mid Z=1)\} \times \{E(Y \mid Z=4) - E(Y \mid Z=1)\}$$` 
+ `$$= \{E(P \mid Z=4) - E(P \mid Z=1)\} \times \{E(Y \mid Z=2) - E(Y \mid Z=1)\}$$`
+ 
+* Here's what the alphabet means
+  * `\(P\)`: Ability Test
+  * `\(Y\)`: Self-assessment
+  * `\(Z\)`: Exogenous variables
+---
+### Testing Assumption of univariate latent variable
+
+<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-b6b20ae6f0e27cad2afa" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-b6b20ae6f0e27cad2afa">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["1","2","3","4","5","6"],["Korean","Korean","Korean","Math","Math","Math"],[2018,2019,2020,2018,2019,2020],[-0.13,-0.06,-0.15,-0.08,-0.09,-0.12],[-0.03,0.02,-0.01,-0.02,-0.02,-0.01]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>subject<\/th>\n      <th>year<\/th>\n      <th>X2.5<\/th>\n      <th>X97.5<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":3,"columnDefs":[{"className":"dt-right","targets":[2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[3,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+
+* Except for Korean (2019), 95% confidence intervals with bootstrap did not include zero.
+
+* This means that we **reject** the null hypothesis.
+
+* The test results do not indicate the exact model.
+
+* Considering that parental income and gender are unlikely to have a direct effect on the ability test, 
+
+* This means that **gender can have a direct impact on self-evaluation**.
+
+---
+### Gain Score Analysis
+#### Gender
+* Gender is a prime example of an exogenous variable.
+
+* Exogenous variables are likely to affect academic performance through a variety of pathways.
+
+* Gender is a factor in self-assessment and self-report measures, as well as social desirability bias.
+
+* For analysis purposes, boys were recoded as 0 and girls as 1.
+
+* If `\(\tau\)` is statistically significant, we can say that gender has a direct effect on self-evaluation, not mediated by academic ability.
+---
+#### Analysis results
+* Results are for Korean and Math courses from 2018-2021.
+
+* Circles are point estimates, vertical lines are 95% confidence intervals.
+
+* If the vertical line does not meet the dotted line on the horizontal line, it is statistically significant.
+&lt;br/&gt;&lt;br/&gt;
+&lt;center&gt;
+&lt;img src="myfirst-rmd_files/figure-html/unnamed-chunk-4-1.png" width="300px" /&gt;&lt;img src="myfirst-rmd_files/figure-html/unnamed-chunk-4-2.png" width="300px" /&gt;
+&lt;/center&gt;
+&lt;center&gt; Figure 4 &lt;/center&gt;
+---
+#### Analysis results
+* The sign of the point estimates was consistently negative.
+
+* This means that girls rate themselves lower than boys in Self-evaluation.
+
+* This means that there may be gender differences in self-evaluation results other than academic ability.
+&lt;br/&gt;&lt;br/&gt;
+&lt;center&gt;
+&lt;img src="myfirst-rmd_files/figure-html/unnamed-chunk-5-1.png" width="300px" /&gt;&lt;img src="myfirst-rmd_files/figure-html/unnamed-chunk-5-2.png" width="300px" /&gt;
+&lt;/center&gt;
+&lt;center&gt; Figure 4 &lt;/center&gt;
+---
+class: inverse, center, middle
+
+# Conclusion
+---
+### Summary
+* Students tend to overestimate their academic abilities compared to ability tests.
+
+* Self-Assessment is a method that is directly affected by factors other than academic ability.
+
+* Using self-assessments as a measure of academic performance can be dangerous.
+
+
+### Limitation and Suggestions
+* Establishing the ability test as the gold standard for academic ability without further empirical validation.
+
+* Further research is needed on the effects of discrepancy between self-assessment and academic ability.
+
+* One can utilize the univariate latent variable assumption test to test for DIF.
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
