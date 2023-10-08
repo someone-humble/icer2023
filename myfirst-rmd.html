@@ -34,7 +34,7 @@ class: center, middle, inverse, title-slide
 ### Department of Education, Seoul National University
 ]
 .date[
-### 2023/10/11 (updated: 2023-10-07)
+### 2023/10/11 (updated: 2023-10-08)
 ]
 
 ---
@@ -46,45 +46,53 @@ class: inverse, center, middle
 # Introduction
 ---
 ### Validity of self-assessment
-* As an abstract concept, education attempts to measure a variety of latent variables, including academic ability, creativity, and career maturity.&lt;br/&gt;
+* In education, educators attempts to measure a variety of latent variables, including academic ability, creativity, and career maturity.&lt;br/&gt;
 
 * In particular, in the classroom, the latent variable of most interest to teachers and students is academic ability.&lt;br/&gt;
 
 * There are many ways to measure academic ability.
+&lt;center&gt;
+&lt;img src="https://cdn-icons-png.flaticon.com/512/2974/2974155.png" width="150" height="150" /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;img src="https://cdn-icons-png.flaticon.com/512/4728/4728534.png" width="150" height="150" /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;img src="https://cdn-icons-png.flaticon.com/512/9238/9238718.png" width="150" height="150" /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;/center&gt;
+&lt;center&gt;Teacher Assessment&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+Self-Assessment&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+Peer Assessment&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/center&gt;
+* In particular, there are several studies on **self-assessment validity.**
 
-* In particular, there are several studies on self-assessment validity.
-
-
-&lt;img src="https://cdn-icons-png.flaticon.com/512/2974/2974155.png" width="150" height="150" /&gt;&lt;/left&gt;
-&lt;img src="https://cdn-icons-png.flaticon.com/512/4728/4728534.png" width="150" height="150" /&gt;
-&lt;img src="https://cdn-icons-png.flaticon.com/512/9238/9238718.png" width="150" height="150" /&gt;
-
-
+* These studies show that it can be **difficult** for students to validly measure their academic performance as an abstract concept.
 ---
 ### Validity conditions from a structural perspective
 * In order for the measurement of a latent variable to be causally valid, **Exclusion Restriction assumption** must be met.
 
-* In measurement, Exclusion Restriction assumption means that the exogenous variable affects the indicators by fully mediating the latent variable.
+* In measurement, Exclusion Restriction assumption means that the exogenous variable affects the indicators by **fully mediating the latent variable.**
 
-* Assessment that do not fulfill the Exclusion Restriction assumption can lead to serious social problems such as fairness.
-&lt;br/&gt;&lt;br/&gt;
+* Assessment that do not fulfill the Exclusion Restriction assumption can lead to serious social problems such as **fairness**.
 
-&lt;img src="https://cdn-icons-png.flaticon.com/512/3053/3053723.png" width="110" height="110" /&gt;
+* For example, if men are more generous with their self-evaluations than women, the evaluation may be different for each gender.
+
+* One of the items in the **Korean school record** is a self-assessment form that students fill out.
+&lt;br/&gt;
+&lt;center&gt;
+&lt;img src="https://cdn-icons-png.flaticon.com/512/3053/3053723.png" width="110" height="110" /&gt;&lt;/center&gt;
 
 ---
-
+class: center, middle
+## Research questions
+### To check the degree of discrepancy between self-assessment and ability test,
+### To check whether the self-assessment is structurally valid.
+---
 class: inverse, center, middle
-
 # Theoretical background
-
 ---
 ### Structural Causal Model of Exclusion Restriction Assumption
 .pull-left[
 * Structural causal model for the Exclusion Restriction assumption in the measurement model is shown in Figure 1.
 
-* In Figure 1, the red path indicates a violation of the Exclusion Restriction Assumption.
+* In Figure 1, the red path indicates a **violation of the Exclusion Restriction Assumption.**
 
-* Among the non-causal path, because of the path of the red line, `\(X_1\)` contains information from `\(T\)`.
+* Among the non-causal path, because of the path of the red path, `\(X_1\)` contains information from `\(T\)`.
   * `\(\eta \rightarrow X_1\)`: Causal path
   * `\(\eta \leftarrow T  \rightarrow X_1\)`: Non-causal path
   ]
@@ -95,26 +103,32 @@ class: inverse, center, middle
 &lt;center&gt; Figure 1&lt;/center&gt;
 ]
 ---
-
 ### Structural description of the DIF &lt;br/&gt; (utilizing gender and self-assessment)
 * The Exclusion Restriction Assumption in measurement is structurally very similar to Differential Item Functioning (DIF).
 
-* Gender affects self-evaluation in two ways.
+* Gender affects self-assessment in two ways.
 
-  * The first path is the **rational path** (the path through which the population variable affects the correctness rate via ability).
+  * The first path is the **rational path** (the path through which the gender variable affects the correctness rate via ability).
 
-  * The second path is the **irrational path** (where the population variable directly affects the correctness rate).
+  * The second path is the **irrational path** (where the gender variable directly affects the correctness rate).
 
 * Here, the second path is **violating the Exclusion Restriction Assumption**.
 
 * This means that groups of people with the same ability may have different rates of correct responses.
 ---
-### Assumption of univariate latent variable
+### Assumption of unidimensionality latent variable
 * Causally related components are typically multivariate, not univariate, and it is necessary to validate this univariate assumption.
 
 * For example, it is not that the psychological construct of motivation affects specific behaviors (outcomes), but rather that each empirical item that measures motivation can affect specific behaviors (outcomes).
 
-* Univariate assumptions in latent factor models are empirically testable.
+* Univariate assumptions in latent factor models are **empirically testable.**
+
+* Exclusion Restriction assumption is a sufficient condition for the unidimensionality assumption. &lt;center&gt;
+`\(Exclusion Restriction \rightarrow Unidimensionality\)` &lt;/center&gt;&lt;br/&gt;
+
+* This means that if the unidimensionality assumption is rejected, the exclusionary constraint assumption may also be rejected.
+&lt;center&gt;
+`\(\neg Unidimensionality  \rightarrow \neg Exclusion Restriction\)` &lt;/center&gt;
 ---
 class: inverse, center, middle
 
@@ -126,7 +140,7 @@ class: inverse, center, middle
 
 * For the purpose of validation, ability test was utilized as the gold standard.
 
-* The structural causal model between the variables of interest is shown in figure 2.
+* The structural causal model between the variables of interest is shown in Figure 2.
 
 &lt;center&gt;
 &lt;img src="https://drive.google.com/uc?id=1ml9NYjrt-6tMpwCQxoJIJRRLRYpEaFOj" width="300" height="300" /&gt;&lt;br/&gt;
@@ -134,13 +148,13 @@ Figure 2
 &lt;/center&gt;
 ---
 ### Testing the Exclusion Restriction Assumption in a measurement
-#### Testing Assumption of univariate latent variable
+#### Testing Assumption of unidimentionality latent variable
 * The general latent factor model has the equation (1).
 `$$X_i = \lambda_i\eta_i + \epsilon_i$$`
 &lt;center&gt; equation (1) &lt;/center&gt;
 &lt;br/&gt;&lt;br/&gt;
 
-* If the exclusion constraint assumption is satisfied in Eq. (1), Theorem 1 is derived.
+* If unidimentional assumption is satisfied in Eq. (1), Theorem 1 is derived.
 `$$E(X_i \mid Z=z) - E(X_i \mid Z=z*) = \alpha_i\beta_i$$`
 &lt;center&gt; Theorem 1 &lt;/center&gt;
 &lt;br/&gt;&lt;br/&gt;
@@ -172,8 +186,8 @@ class: inverse, center, middle
   * Agreement is when the difference is **zero**,
   * Overestimation is when the difference is **positive**.
 
-<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-f9a146817bfbba16a190" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-f9a146817bfbba16a190">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["1","2","3","4","5","6","7","8"],["Korean","Korean","Korean","Korean","Math","Math","Math","Math"],[2018,2019,2020,2021,2018,2019,2020,2021],[6,5,6,9,5,6,10,13],[22,22,24,26,21,36,35,37],[72,73,70,65,74,58,56,50]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>subject<\/th>\n      <th>year<\/th>\n      <th>Under<\/th>\n      <th>Agree<\/th>\n      <th>Over<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":4,"columnDefs":[{"className":"dt-right","targets":[2,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[4,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-22027d3824f9c19509c0" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-22027d3824f9c19509c0">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["1","2","3","4","5","6","7","8"],["Korean","Korean","Korean","Korean","Math","Math","Math","Math"],[2018,2019,2020,2021,2018,2019,2020,2021],[6,5,6,9,5,6,10,13],[22,22,24,26,21,36,35,37],[72,73,70,65,74,58,56,50]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>subject<\/th>\n      <th>year<\/th>\n      <th>Under<\/th>\n      <th>Agree<\/th>\n      <th>Over<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":4,"columnDefs":[{"className":"dt-right","targets":[2,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[4,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
 ---
 ### Degree of discrepancy
 * The overestimation group had the highest percentage, 50-73%,
@@ -182,10 +196,10 @@ class: inverse, center, middle
 
 * Underestimation was the least common at 5-13%.
 
-<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-9b5657c6b456caa8a1f1" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-9b5657c6b456caa8a1f1">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["1","2","3","4","5","6","7","8"],["Korean","Korean","Korean","Korean","Math","Math","Math","Math"],[2018,2019,2020,2021,2018,2019,2020,2021],[6,5,6,9,5,6,10,13],[22,22,24,26,21,36,35,37],[72,73,70,65,74,58,56,50]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>subject<\/th>\n      <th>year<\/th>\n      <th>Under<\/th>\n      <th>Agree<\/th>\n      <th>Over<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":4,"columnDefs":[{"className":"dt-right","targets":[2,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[4,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-416dfb606adfe824522e" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-416dfb606adfe824522e">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["1","2","3","4","5","6","7","8"],["Korean","Korean","Korean","Korean","Math","Math","Math","Math"],[2018,2019,2020,2021,2018,2019,2020,2021],[6,5,6,9,5,6,10,13],[22,22,24,26,21,36,35,37],[72,73,70,65,74,58,56,50]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>subject<\/th>\n      <th>year<\/th>\n      <th>Under<\/th>\n      <th>Agree<\/th>\n      <th>Over<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":4,"columnDefs":[{"className":"dt-right","targets":[2,3,4,5]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[4,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
 ---
-### Testing Assumption of univariate latent variable
+### Testing Assumption of unidimentionality latent variable
 * Exogenous Variable was redefined as a variable with four response categories.
 
 * Specifically, the response categories were recoded as
@@ -196,17 +210,16 @@ class: inverse, center, middle
   
 * The null hypothesis is as follows. &lt;br/&gt;
 `$$H_0: \{E(P \mid Z=2) - E(P \mid Z=1)\} \times \{E(Y \mid Z=4) - E(Y \mid Z=1)\}$$` 
- `$$= \{E(P \mid Z=4) - E(P \mid Z=1)\} \times \{E(Y \mid Z=2) - E(Y \mid Z=1)\}$$`
- 
-* Here's what the alphabet means
+ `$$= \{E(P \mid Z=4) - E(P \mid Z=1)\} \times \{E(Y \mid Z=2) - E(Y \mid Z=1)\}$$` &lt;center&gt;
+`\(\{\alpha_2 \times \beta_1\} \times \{\alpha_4 \times \beta_2\} = \{\alpha_4 \times \beta_1\} \times \{\alpha_2 \times \beta_2\)`\} &lt;/center&gt; &lt;br/&gt;
   * `\(P\)`: Ability Test
   * `\(Y\)`: Self-assessment
   * `\(Z\)`: Exogenous variables
 ---
-### Testing Assumption of univariate latent variable
+### Testing Assumption of unidimentionality latent variable
 
-<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-b6b20ae6f0e27cad2afa" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-b6b20ae6f0e27cad2afa">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["1","2","3","4","5","6"],["Korean","Korean","Korean","Math","Math","Math"],[2018,2019,2020,2018,2019,2020],[-0.13,-0.06,-0.15,-0.08,-0.09,-0.12],[-0.03,0.02,-0.01,-0.02,-0.02,-0.01]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>subject<\/th>\n      <th>year<\/th>\n      <th>X2.5<\/th>\n      <th>X97.5<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":3,"columnDefs":[{"className":"dt-right","targets":[2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[3,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-8eac06eee55ab8fe0784" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-8eac06eee55ab8fe0784">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["1","2","3","4","5","6"],["Korean","Korean","Korean","Math","Math","Math"],[2018,2019,2020,2018,2019,2020],[-0.13,-0.06,-0.15,-0.08,-0.09,-0.12],[-0.03,0.02,-0.01,-0.02,-0.02,-0.01]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>subject<\/th>\n      <th>year<\/th>\n      <th>X2.5<\/th>\n      <th>X97.5<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":3,"columnDefs":[{"className":"dt-right","targets":[2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[3,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
 
 * Except for Korean (2019), 95% confidence intervals with bootstrap did not include zero.
 
@@ -252,6 +265,9 @@ class: inverse, center, middle
 &lt;br/&gt;&lt;br/&gt;
 &lt;center&gt;
 &lt;img src="myfirst-rmd_files/figure-html/unnamed-chunk-5-1.png" width="300px" /&gt;&lt;img src="myfirst-rmd_files/figure-html/unnamed-chunk-5-2.png" width="300px" /&gt;
+&lt;/center&gt;
+&lt;center&gt; Figure 4 &lt;/center&gt;
+---
 &lt;/center&gt;
 &lt;center&gt; Figure 4 &lt;/center&gt;
 ---
